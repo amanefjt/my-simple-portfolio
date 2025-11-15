@@ -1,144 +1,118 @@
-{\rtf1\ansi\ansicpg932\cocoartf2867
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1140\margr1140\margb1140\margt1140\vieww10800\viewh8400\viewkind0
-\deftab567
-\pard\tx567\tx1134\tx1701\tx2268\tx2835\tx3402\tx3969\tx4536\tx5103\tx5670\tx6237\tx6804\pardeftab567\pardirnatural\partightenfactor0
+/* 基本設定とリセット */
+body {
+    /* サイトの大きな特徴である黒背景と白文字 */
+    background-color: #000; 
+    color: #fff;
+    /* シンプルなフォントを設定 */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* スクロールを滑らかにします */
+    scroll-behavior: smooth; 
+}
 
-\f0\fs24 \cf0 body \{\
-    font-family: sans-serif;\
-    margin: 0;\
-    padding: 0;\
-    background-color: #f4f4f4;\
-    color: #333;\
-\}\
-header \{\
-    background-color: #333;\
-    color: white;\
-    padding: 20px;\
-    text-align: center;\
-\}\
-section \{\
-    padding: 20px;\
-    margin: 20px;\
-    background: white;\
-    border-radius: 8px;\
-\}}
-{<xRes_plst_128.plist><?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>CFBundleVersion</key>
-	<string>3.0.0</string>
-	<key>FooterDateType</key>
-	<integer>0</integer>
-	<key>FooterHeight</key>
-	<real>24</real>
-	<key>FooterTimeType</key>
-	<integer>0</integer>
-	<key>HeaderDateType</key>
-	<integer>0</integer>
-	<key>HeaderHeight</key>
-	<real>24</real>
-	<key>HeaderTimeType</key>
-	<integer>0</integer>
-	<key>InvisibleReturnColor</key>
-	<data>
-	BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2JqZWN0AIWEAWMDhAJm
-	ZoOOSxo/AYY=
-	</data>
-	<key>InvisibleReturns</key>
-	<true/>
-	<key>InvisibleSpaceColor</key>
-	<data>
-	BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2JqZWN0AIWEAWMDhAJm
-	ZoOOSxo/AYY=
-	</data>
-	<key>InvisibleSpaces</key>
-	<false/>
-	<key>InvisibleTabColor</key>
-	<data>
-	BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2JqZWN0AIWEAWMDhAJm
-	ZoOOSxo/AYY=
-	</data>
-	<key>InvisibleTabs</key>
-	<true/>
-	<key>PageGuidesCellWidth</key>
-	<real>0.0</real>
-	<key>PageGuidesColor</key>
-	<data>
-	BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2JqZWN0AIWEAWMDhAJm
-	ZoOOSxo/AYY=
-	</data>
-	<key>PageGuidesLeftIndent</key>
-	<real>0.0</real>
-	<key>PageGuidesLineHeight</key>
-	<real>20</real>
-	<key>PageGuidesLineSpacing</key>
-	<real>4</real>
-	<key>PageGuidesRightIndent</key>
-	<real>0.0</real>
-	<key>PageGuidesSize</key>
-	<real>1</real>
-	<key>PageGuidesType</key>
-	<integer>0</integer>
-	<key>PageLayoutColumnNumber</key>
-	<integer>1</integer>
-	<key>PageLayoutColumnSpace</key>
-	<real>18</real>
-	<key>PageLayoutUnits</key>
-	<integer>0</integer>
-	<key>PropertyAuthor</key>
-	<string></string>
-	<key>PropertyCompany</key>
-	<string></string>
-	<key>PropertyCopyright</key>
-	<string></string>
-	<key>RulerOrigin</key>
-	<false/>
-	<key>RulerUnits</key>
-	<integer>0</integer>
-	<key>SavedTextSize</key>
-	<integer>766</integer>
-	<key>SelectedRangeLength</key>
-	<integer>0</integer>
-	<key>SelectedRangeLocation</key>
-	<integer>312</integer>
-	<key>ShowInfoArea</key>
-	<true/>
-	<key>ShowInvisibles</key>
-	<false/>
-	<key>ShowPageGuides</key>
-	<true/>
-	<key>ShowRuler</key>
-	<true/>
-	<key>ShowToolbar</key>
-	<true/>
-	<key>SmartWordEdit</key>
-	<true/>
-	<key>StartPageNumber</key>
-	<integer>0</integer>
-	<key>TabIntervalUnits</key>
-	<integer>0</integer>
-	<key>ToolbarSmallSize</key>
-	<true/>
-	<key>ToolbarType</key>
-	<integer>1</integer>
-	<key>TypesetterWordwrap</key>
-	<integer>2</integer>
-	<key>VerticalDirection</key>
-	<false/>
-	<key>WindowFrameOriginX</key>
-	<real>290</real>
-	<key>WindowFrameOriginY</key>
-	<real>237</real>
-	<key>WindowFrameOriginY2</key>
-	<real>316</real>
-	<key>WindowFrameSizeHeight</key>
-	<real>527</real>
-	<key>WindowFrameSizeWidth</key>
-	<real>565</real>
-</dict>
-</plist>
-</xRes_plst_128.plist>}
+/* リンクの色を白または薄いグレーにして目立たせすぎないように */
+a {
+    color: #ccc;
+    text-decoration: none; /* 下線を消す */
+}
+
+a:hover {
+    color: #fff; /* ホバーで色を強調 */
+}
+
+/* コンテンツの幅を制限し、中央に寄せるための共通クラス */
+.container {
+    max-width: 960px; /* PCでの幅を制限 */
+    margin: 0 auto; /* 中央寄せ */
+    padding: 0 20px; /* 左右に余白を設定 */
+}
+
+/* --- ヘッダー（ナビゲーション）のスタイル --- */
+header {
+    background-color: #000;
+    padding: 20px 0;
+    border-bottom: 1px solid #333; /* 下の境界線 */
+}
+
+header .container {
+    display: flex; /* 子要素を横並びに */
+    justify-content: space-between; /* 左右に配置 */
+    align-items: center;
+}
+
+.site-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none; /* リストの点（・）を消す */
+    padding: 0;
+    margin: 0;
+    display: flex; /* メニュー項目を横並びに */
+}
+
+.nav-links li {
+    margin-left: 20px; /* 項目間のスペース */
+}
+
+/* --- メインコンテンツのスタイル --- */
+main {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+/* ヒーローセクション（一番上の大きな見出し） */
+.hero-section {
+    text-align: center; /* 中央寄せ */
+    padding: 100px 0;
+}
+
+.main-heading {
+    font-size: 3em;
+    margin-bottom: 10px;
+    letter-spacing: 2px; /* 文字間隔を少し開ける */
+}
+
+.description {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 15px auto;
+}
+
+/* その他のコンテンツセクション */
+.content-section {
+    padding: 50px 0;
+    border-top: 1px solid #333;
+    margin-top: 40px;
+}
+
+.section-title {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* 作品項目のスタイル */
+.work-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.work-item h3 {
+    color: #ccc;
+    margin-top: 0;
+}
+
+/* --- フッターのスタイル --- */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    font-size: 0.8em;
+    color: #666;
+}
