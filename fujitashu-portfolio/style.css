@@ -1,43 +1,56 @@
-/* 基本設定とリセット */
+/* =======================================
+   基本設定とリセット
+   ======================================= */
 body {
-    /* サイトの大きな特徴である黒背景と白文字 */
-    background-color: #000; 
-    color: #fff;
-    /* シンプルなフォントを設定 */
-    font-family: Arial, sans-serif;
+    /* 背景を白に変更し、テキストを黒に変更します */
+    background-color: #fff; 
+    color: #000;
+    font-family: Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     margin: 0;
     padding: 0;
-    /* スクロールを滑らかにします */
     scroll-behavior: smooth; 
 }
 
-/* リンクの色を白または薄いグレーにして目立たせすぎないように */
+/* リンクの色を画像に合わせて青色にし、下線を表示します */
 a {
-    color: #ccc;
-    text-decoration: none; /* 下線を消す */
+    color: #369; /* やや落ち着いた青 */
+    text-decoration: underline; /* 下線を表示 */
 }
 
 a:hover {
-    color: #fff; /* ホバーで色を強調 */
+    color: #58a; /* ホバーで少し明るく */
 }
 
 /* コンテンツの幅を制限し、中央に寄せるための共通クラス */
 .container {
-    max-width: 960px; /* PCでの幅を制限 */
-    margin: 0 auto; /* 中央寄せ */
-    padding: 0 20px; /* 左右に余白を設定 */
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* --- ヘッダー（ナビゲーション）のスタイル --- */
 header {
-    background-color: #000;
+    /* ナビゲーションバーは一旦背景画像の上に表示されないことを想定し、シンプルな白背景に */
+    background-color: #fff;
     padding: 20px 0;
-    border-bottom: 1px solid #333; /* 下の境界線 */
+    border-bottom: 1px solid #eee; /* 薄い下線 */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header a {
+    color: #333; /* ナビゲーションのリンクは黒っぽく */
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #000;
 }
 
 header .container {
-    display: flex; /* 子要素を横並びに */
-    justify-content: space-between; /* 左右に配置 */
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -47,93 +60,126 @@ header .container {
 }
 
 .nav-links {
-    list-style: none; /* リストの点（・）を消す */
+    list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* メニュー項目を横並びに */
+    display: flex;
 }
 
 .nav-links li {
-    margin-left: 20px; /* 項目間のスペース */
+    margin-left: 20px;
+}
+
+/* --- ヒーローセクション（背景画像を含む一番上の部分）のスタイル --- */
+.hero-section {
+    /* 画像を背景として設定し、テキストは白に上書きします */
+    background-image: url('スクリーンショット 2025-11-18 8.46.49.png'); /* 実際の画像URLに変更してください */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0 50px; /* 上下に大きめの余白 */
+    color: #fff; /* テキストを白に */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* テキストの視認性向上のための影 */
+}
+
+.hero-section .container {
+    /* ヒーローセクション内のテキストを中央揃えから左揃えに戻す */
+    text-align: left;
+}
+
+.hero-section a {
+    color: #ccc; /* ヒーローセクション内のリンクは薄い白で下線なし */
+    text-decoration: none;
+}
+
+.hero-section a:hover {
+    color: #fff;
+}
+
+.main-heading {
+    font-size: 3em;
+    margin-bottom: 5px;
+    letter-spacing: normal;
+}
+
+.sub-heading {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.contact-links p {
+    margin: 5px 0;
+    font-size: 1em;
 }
 
 /* --- メインコンテンツのスタイル --- */
 main {
     padding-top: 50px;
     padding-bottom: 80px;
+    background-color: #fff; /* 背景画像をメインセクションでリセット */
 }
 
-/* ヒーローセクション（一番上の大きな見出し） */
-.hero-section {
-    text-align: center; /* 中央寄せ */
-    padding: 100px 0;
-}
-
-.main-heading {
-    font-size: 3em;
-    margin-bottom: 10px;
-    letter-spacing: 2px; /* 文字間隔を少し開ける */
-}
-
-.description {
-    font-size: 1.1em;
-    line-height: 1.6;
-    max-width: 700px;
-    margin: 15px auto;
-}
-
-/* その他のコンテンツセクション */
+/* 各コンテンツセクション */
 .content-section {
-    padding: 50px 0;
-    border-top: 1px solid #333;
-    margin-top: 40px;
+    padding: 20px 0;
+    border-top: none; /* セクション間の区切り線を削除 */
+    margin-top: 20px;
 }
 
 .section-title {
     font-size: 2em;
-    text-align: center;
-    margin-bottom: 40px;
+    text-align: left; /* 左寄せに戻す */
+    margin-bottom: 30px;
 }
 
-/* 作品項目のスタイル */
-.work-item {
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #333;
-    border-radius: 5px;
+/* 小見出しのスタイル（画像に合わせて太字化） */
+.subsection-title {
+    font-size: 1.2em;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-left: none; /* 左側の線を削除 */
+    padding-left: 0;
+    font-weight: bold; /* 太字に */
+    /* 画像の「所属」のように、見出しに少し余白を持たせる */
+    padding-bottom: 5px;
 }
 
-.work-item h3 {
-    color: #ccc;
-    margin-top: 0;
+/* 段落（特に研究の概要）のスタイル */
+.description, .research-text {
+    text-align: left;
+    max-width: 960px; /* コンテナ幅に合わせる */
+    margin: 15px 0;
+    font-size: 1em;
+    line-height: 1.7;
+}
+
+/* リストのスタイル（学歴、業績など） */
+.history-list, .publication-list {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.history-list li, .publication-list li {
+    margin-bottom: 5px;
+    line-height: 1.6;
+    /* ぶら下げインデントを解除し、左に揃える */
+    padding-left: 0;
+    text-indent: 0;
+}
+
+.indent-list {
+    margin-left: 0;
 }
 
 /* --- フッターのスタイル --- */
 footer {
     text-align: center;
     padding: 20px 0;
-    border-top: 1px solid #333;
+    border-top: 1px solid #eee;
     font-size: 0.8em;
     color: #666;
-}
-/* style.css の末尾に追加 */
-
-.sub-heading {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-    font-weight: normal;
-    line-height: 1.5;
-}
-
-.research-text {
-    text-align: left; /* 段落を左寄せに戻す */
-    max-width: 800px;
-    margin: 15px auto;
-    font-size: 1em;
-}
-
-/* リンクを追記する部分のリンクスタイルを調整 */
-.contact-links a {
-    color: #ccc;
-    text-decoration: underline;
+    background-color: #fff;
 }
